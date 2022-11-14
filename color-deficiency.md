@@ -5,10 +5,32 @@ Margaret Reed
 
 ## Color Vision Deficiency and Data Visualization
 
+Color vision deficiency is typically referred to as color blindness and
+can be defined as the inability to distinguish certain colors, or any
+colors at all. Research shows that about 8% of men and 0,5% of women
+suffer from color blindness deficiency to some extent.
+
 As mentioned in class, color vision deficiency is an important issue to
 be aware of when creating data visualizations. While red-green confusion
 is the most well known there are several types, all of which should be
 considered when creating accessible visualizations.
+
+Problems faced by color blind people when it comes to data
+visualization:
+
+\*Not being able to recognize series or categories: The biggest problem
+occurs when people suffering from CVD has to distinguish between
+categories. Certain colors that look totally different for healthy
+people may look almost identical for color blind people.
+
+\*Not being able to recognize the key message at a glance: Another
+problem might occur is that color blind people may not be able to
+recognize key message at a glance. For example you might color code your
+graph in the way that the increase is colored in green and decrease is
+colored in red. But color blind people wouldn’t notice that.
+
+So it is important to design color vision deficiency graph when doing
+visualization.
 
 ### Types of color vision deficiencies:
 
@@ -167,5 +189,6 @@ deficiencies. Often times the medium in which we present our
 visualizations can considerably impact how the color distinctions come
 across. Not every visualization is viewed on a large projector, some are
 dispersed for individual viewing, while others may even be printed in
-black and white. Therefore is it very important to consider double
-encoding and high contrast colors when creating visualizations.
+black and white. Therefore is it very important to consider other skills
+such as double encoding, using shapes and textures, using high contrast
+colors when creating visualizations.
