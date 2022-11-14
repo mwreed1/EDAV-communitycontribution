@@ -30,7 +30,7 @@ The biggest problem occurs when people suffering from CVD has to distinguish bet
 *Not being able to recognize the key message at a glance:
 Another problem might occur is that color blind people may not be able to recognize key message at a glance. For example you might color code your graph in the way that the increase is colored in green and decrease is colored in red. But color blind people wouldn't notice that.
 
-So it is important to design color vision deficiency graph when doing visualization.
+So it is important to design color vision deficiency friendly graph when doing visualization.
 
 
 ### Types of color vision deficiencies:

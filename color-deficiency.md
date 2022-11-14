@@ -29,8 +29,8 @@ recognize key message at a glance. For example you might color code your
 graph in the way that the increase is colored in green and decrease is
 colored in red. But color blind people wouldn’t notice that.
 
-So it is important to design color vision deficiency graph when doing
-visualization.
+So it is important to design color vision deficiency friendly graph when
+doing visualization.
 
 ### Types of color vision deficiencies:
 
