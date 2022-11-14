@@ -1,7 +1,7 @@
 Color Deficiency in Data Visualization
 ================
-Margaret Reed
-2022-11-14
+Margaret Reed, Yaxin Hu
+2022-11-15
 
 ## Color Vision Deficiency and Data Visualization
 
@@ -99,7 +99,7 @@ iris %>%
   geom_point()
 ```
 
-![](color-deficiency_files/figure-gfm/original-plot-1.png)<!-- -->
+![](Merge_files/figure-gfm/original-plot-1.png)<!-- -->
 
 Here is how this might plot look like with the above conditions:
 
@@ -125,7 +125,7 @@ iris %>%
   theme_minimal()
 ```
 
-![](color-deficiency_files/figure-gfm/contrast-plot-1.png)<!-- -->
+![](Merge_files/figure-gfm/contrast-plot-1.png)<!-- -->
 
 Double Encoding:
 
@@ -138,7 +138,7 @@ iris %>%
   theme_minimal()
 ```
 
-![](color-deficiency_files/figure-gfm/shapes-plot-1.png)<!-- -->
+![](Merge_files/figure-gfm/shapes-plot-1.png)<!-- -->
 
 **A Better Palette:**
 
@@ -165,7 +165,7 @@ iris %>%
   theme_minimal()
 ```
 
-![](color-deficiency_files/figure-gfm/okabeito-plot-1.png)<!-- -->
+![](Merge_files/figure-gfm/okabeito-plot-1.png)<!-- -->
 
 <img src="images/new-1.png" width="290" />
 <img src="images/new-2.png" width="290" />
@@ -175,6 +175,126 @@ iris %>%
 <img src="images/new-6.png" width="290" />
 <img src="images/new-7.png" width="290" />
 <img src="images/new-8.png" width="290" />
+
+**Other packages to deal with color blind:**
+
+1.Another nice package–“RColorBrewer” can also deal with colorblind
+<https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3>
+
+``` r
+library(RColorBrewer)
+```
+
+This function is to see the list of all the palettes.
+
+Maxcolors represent the maximum number of colors available in the
+palette.
+
+Category represents what kind of data it can apply to, there are 3 kinds
+of palattes: Sequential palattes, Qualitative palettes and Diverging
+palattes. Sequential palettes: suited to ordered data that progress from
+low to high. Lightness steps dominate the look of these schemes, with
+light colors for low data values to dark colors for high data values.
+Qualitative palettes:do not imply magnitude differences between legend
+classes, and hues are used to create the primary visual differences
+between classes. Qualitative schemes are best suited to representing
+nominal or categorical data. Diverging palettes:put equal emphasis on
+mid-range critical values and extremes at both ends of the data range.
+The critical class or break in the middle of the legend is emphasized
+with light colors and low and high extremes are emphasized with dark
+colors that have contrasting hues.
+
+Colorblind represents color blind friendly or not.(True:colorblind
+friendly; False: not friendly to colorblind)
+
+``` r
+brewer.pal.info
+```
+
+    ##          maxcolors category colorblind
+    ## BrBG            11      div       TRUE
+    ## PiYG            11      div       TRUE
+    ## PRGn            11      div       TRUE
+    ## PuOr            11      div       TRUE
+    ## RdBu            11      div       TRUE
+    ## RdGy            11      div      FALSE
+    ## RdYlBu          11      div       TRUE
+    ## RdYlGn          11      div      FALSE
+    ## Spectral        11      div      FALSE
+    ## Accent           8     qual      FALSE
+    ## Dark2            8     qual       TRUE
+    ## Paired          12     qual       TRUE
+    ## Pastel1          9     qual      FALSE
+    ## Pastel2          8     qual      FALSE
+    ## Set1             9     qual      FALSE
+    ## Set2             8     qual       TRUE
+    ## Set3            12     qual      FALSE
+    ## Blues            9      seq       TRUE
+    ## BuGn             9      seq       TRUE
+    ## BuPu             9      seq       TRUE
+    ## GnBu             9      seq       TRUE
+    ## Greens           9      seq       TRUE
+    ## Greys            9      seq       TRUE
+    ## Oranges          9      seq       TRUE
+    ## OrRd             9      seq       TRUE
+    ## PuBu             9      seq       TRUE
+    ## PuBuGn           9      seq       TRUE
+    ## PuRd             9      seq       TRUE
+    ## Purples          9      seq       TRUE
+    ## RdPu             9      seq       TRUE
+    ## Reds             9      seq       TRUE
+    ## YlGn             9      seq       TRUE
+    ## YlGnBu           9      seq       TRUE
+    ## YlOrBr           9      seq       TRUE
+    ## YlOrRd           9      seq       TRUE
+
+This function is to show specific colors for each palette.
+
+``` r
+#display.brewer.all(n=NULL, type="all", select=NULL, exact.n=TRUE)
+display.brewer.all(colorblindFriendly = TRUE)
+```
+
+![](Merge_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+Example with a colorblind friendly color palette(“Dark2”):
+
+``` r
+library(RColorBrewer)
+
+iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width)) + 
+  geom_point(aes(color = Species)) +
+  theme_minimal()+
+  scale_color_brewer(palette = "Dark2")
+```
+
+![](Merge_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+2.Another nice package–“viridis”:aims to draw images that are easier to
+read by color blind and/or color deficient people.
+
+<https://cran.r-project.org/web/packages/viridis/index.html>
+
+Discrete variables can use scale_color_viridis(); Continuous variables
+can use scale_fill_viridis()
+
+Example using scale_color_viridis():
+
+``` r
+library(viridis)
+```
+
+    ## Loading required package: viridisLite
+
+``` r
+iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width))+
+  geom_point(aes(color = Species))+
+  scale_color_viridis(discrete = TRUE)
+```
+
+![](Merge_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ### Other considerations
 

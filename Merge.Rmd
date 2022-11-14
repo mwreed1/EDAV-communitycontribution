@@ -1,6 +1,6 @@
 ---
 title: "Color Deficiency in Data Visualization"
-author: "Margaret Reed"
+author: "Margaret Reed, Yaxin Hu"
 date: "`r Sys.Date()`"
 output: github_document
 ---
@@ -141,6 +141,68 @@ iris %>%
 ![](images/new-3.png){width="290"} ![](images/new-4.png){width="290"} 
 ![](images/new-5.png){width="290"} ![](images/new-6.png){width="290"}
 ![](images/new-7.png){width="290"} ![](images/new-8.png){width="290"}
+
+**Other packages to deal with color blind:**
+
+1.Another nice package--"RColorBrewer" can also deal with colorblind
+https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
+
+```{r}
+library(RColorBrewer)
+```
+
+
+This function is to see the list of all the palettes.
+
+Maxcolors represent the maximum number of colors available in the palette.
+
+Category represents what kind of data it can apply to, there are 3 kinds of palattes: Sequential palattes, Qualitative palettes and Diverging palattes.
+Sequential palettes: suited to ordered data that progress from low to high. Lightness steps dominate the look of these schemes, with light colors for low data values to dark colors for high data values.
+Qualitative palettes:do not imply magnitude differences between legend classes, and hues are used to create the primary visual differences between classes. Qualitative schemes are best suited to representing nominal or categorical data.
+Diverging palettes:put equal emphasis on mid-range critical values and extremes at both ends of the data range. The critical class or break in the middle of the legend is emphasized with light colors and low and high extremes are emphasized with dark colors that have contrasting hues.
+
+Colorblind represents color blind friendly or not.(True:colorblind friendly; False: not friendly to colorblind)
+
+```{r}
+brewer.pal.info
+```
+
+This function is to show specific colors for each palette.
+```{r}
+#display.brewer.all(n=NULL, type="all", select=NULL, exact.n=TRUE)
+display.brewer.all(colorblindFriendly = TRUE)
+```
+
+Example with a colorblind friendly color palette("Dark2"):
+```{r}
+
+library(RColorBrewer)
+
+iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width)) + 
+  geom_point(aes(color = Species)) +
+  theme_minimal()+
+  scale_color_brewer(palette = "Dark2")
+
+```
+
+
+2.Another nice package--"viridis":aims to draw images that are easier to read by color blind and/or color deficient people.
+
+https://cran.r-project.org/web/packages/viridis/index.html
+
+Discrete variables can use scale_color_viridis(); Continuous variables can use scale_fill_viridis()
+
+Example using scale_color_viridis():
+
+```{r}
+library(viridis)
+iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width))+
+  geom_point(aes(color = Species))+
+  scale_color_viridis(discrete = TRUE)
+```
+
 
 
 ### Other considerations
