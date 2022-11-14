@@ -68,13 +68,13 @@ iris %>%
   geom_point()
 ```
 
+
 Here is how this might plot look like with the above conditions:
 
-![](images/original-1.png){width="300"} ![](images/original-2.png){width="300"} ![](images/original-3.png){width="300"}
-
-![](images/original-4.png){width="300"} ![](images/original-5.png){width="300"} ![](images/original-6.png){width="300"}
-
-![](images/original-7.png){width="300"} ![](images/original-8.png){width="300"}
+![](images/original-1.png){width="290"} ![](images/original-2.png){width="290"} 
+![](images/original-3.png){width="290"} ![](images/original-4.png){width="290"} 
+![](images/original-5.png){width="290"} ![](images/original-6.png){width="290"}
+![](images/original-7.png){width="290"} ![](images/original-8.png){width="290"}
 
 **Ways to improve without changing color:**
 
@@ -123,11 +123,12 @@ iris %>%
 ```
 
 
-![](images/new-1.png){width="300"} ![](images/new-2.png){width="300"} ![](images/new-3.png){width="300"}
 
-![](images/new-4.png){width="300"} ![](images/new-5.png){width="300"} ![](images/new-6.png){width="300"}
+![](images/new-1.png){width="290"} ![](images/new-2.png){width="290"} 
+![](images/new-3.png){width="290"} ![](images/new-4.png){width="290"} 
+![](images/new-5.png){width="290"} ![](images/new-6.png){width="290"}
+![](images/new-7.png){width="290"} ![](images/new-8.png){width="290"}
 
-![](images/new-7.png){width="300"} ![](images/new-8.png){width="300"}
 
 ### Other considerations
 

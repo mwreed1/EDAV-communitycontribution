@@ -1,7 +1,7 @@
 Color Deficiency in Data Visualization
 ================
 Margaret Reed
-2022-11-13
+2022-11-14
 
 ## Color Vision Deficiency and Data Visualization
 
@@ -81,16 +81,14 @@ iris %>%
 
 Here is how this might plot look like with the above conditions:
 
-<img src="images/original-1.png" width="300" />
-<img src="images/original-2.png" width="300" />
-<img src="images/original-3.png" width="300" />
-
-<img src="images/original-4.png" width="300" />
-<img src="images/original-5.png" width="300" />
-<img src="images/original-6.png" width="300" />
-
-<img src="images/original-7.png" width="300" />
-<img src="images/original-8.png" width="300" />
+<img src="images/original-1.png" width="290" />
+<img src="images/original-2.png" width="290" />
+<img src="images/original-3.png" width="290" />
+<img src="images/original-4.png" width="290" />
+<img src="images/original-5.png" width="290" />
+<img src="images/original-6.png" width="290" />
+<img src="images/original-7.png" width="290" />
+<img src="images/original-8.png" width="290" />
 
 **Ways to improve without changing color:**
 
@@ -147,16 +145,14 @@ iris %>%
 
 ![](color-deficiency_files/figure-gfm/okabeito-plot-1.png)<!-- -->
 
-<img src="images/new-1.png" width="300" />
-<img src="images/new-2.png" width="300" />
-<img src="images/new-3.png" width="300" />
-
-<img src="images/new-4.png" width="300" />
-<img src="images/new-5.png" width="300" />
-<img src="images/new-6.png" width="300" />
-
-<img src="images/new-7.png" width="300" />
-<img src="images/new-8.png" width="300" />
+<img src="images/new-1.png" width="290" />
+<img src="images/new-2.png" width="290" />
+<img src="images/new-3.png" width="290" />
+<img src="images/new-4.png" width="290" />
+<img src="images/new-5.png" width="290" />
+<img src="images/new-6.png" width="290" />
+<img src="images/new-7.png" width="290" />
+<img src="images/new-8.png" width="290" />
 
 ### Other considerations
 
